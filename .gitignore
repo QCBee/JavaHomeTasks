@@ -1,0 +1,3 @@
+*.iml #project settings
+.idea #directory for idea
+target #for compilation
