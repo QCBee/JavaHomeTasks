@@ -11,14 +11,21 @@ public class Task_Practice {
         System.out.println("Введите стоимость 1 кг печенья и нажмите Enter:");
 
         float CookyPrice = console.nextFloat();
-        float fistPurchase = calculateFirstPurchase (CandyPrice, CookyPrice);
+        float FistPurchase = calculateFirstPurchase (CandyPrice, CookyPrice);
 
-        System.out.println("Стоимость покупки " + fistPurchase);
+        System.out.println("Стоимость первой покупки " + FistPurchase);
+
+        float SecondPurchase = calculateSecondPurchase(CandyPrice, CookyPrice);
+
+        System.out.println("Стоимость второй покупки " + SecondPurchase);
 
     }
 
     public static float calculateFirstPurchase (float CandyPrice, float CookyPrice) {
-        return Math.round(3*(1.8f*CandyPrice + 2f*CookyPrice));
+        return Math.round((0.3f * CandyPrice + 0.4f * CookyPrice));
+    }
+    public static float calculateSecondPurchase (float CandyPrice, float CookyPrice) {
+        return Math.round(3*(1.8f * CandyPrice + 2f * CookyPrice));
     }
 
 
