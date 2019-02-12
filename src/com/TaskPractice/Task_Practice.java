@@ -6,26 +6,26 @@ public class Task_Practice {
     public static void main (String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите стоимость 1 кг конфет и нажмите Enter:");
-        float CandyPrice = console.nextFloat();
+        float candyPrice = console.nextFloat();
 
         System.out.println("Введите стоимость 1 кг печенья и нажмите Enter:");
 
-        float CookyPrice = console.nextFloat();
-        float FistPurchase = calculateFirstPurchase (CandyPrice, CookyPrice);
+        float cookyPrice = console.nextFloat();
+        float fistPurchase = calculateFirstPurchase (candyPrice, cookyPrice);
 
-        System.out.println("Стоимость первой покупки " + FistPurchase);
+        System.out.println("Стоимость первой покупки " + fistPurchase);
 
-        float SecondPurchase = calculateSecondPurchase(CandyPrice, CookyPrice);
+        float secondPurchase = calculateSecondPurchase(candyPrice, cookyPrice);
 
-        System.out.println("Стоимость второй покупки " + SecondPurchase);
+        System.out.println("Стоимость второй покупки " + secondPurchase);
 
     }
 
-    public static float calculateFirstPurchase (float CandyPrice, float CookyPrice) {
-        return Math.round((0.3f * CandyPrice + 0.4f * CookyPrice));
+    public static float calculateFirstPurchase (float candyPrice, float cookyPrice) {
+        return Math.round((0.3f * candyPrice + 0.4f * cookyPrice));
     }
-    public static float calculateSecondPurchase (float CandyPrice, float CookyPrice) {
-        return Math.round(3*(1.8f * CandyPrice + 2f * CookyPrice));
+    public static float calculateSecondPurchase (float candyPrice, float cookyPrice) {
+        return Math.round(3*(1.8f * candyPrice + 2f * cookyPrice));
     }
 
 
