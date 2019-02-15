@@ -1,4 +1,5 @@
-package com.SumNumber;
+/*package com.SumNumber;
+
 
 public class SumNumber {
     public static void main(String[] args) {
@@ -18,5 +19,5 @@ public class SumNumber {
 }
 
 
-
+*/
 
