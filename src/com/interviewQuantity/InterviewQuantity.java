@@ -14,11 +14,13 @@ import java.util.Scanner;
         }
 
     private static int calculateNumberOfInterviews(int numberOfProgrammers){
-        if(numberOfProgrammers <= 1){
-            return numberOfProgrammers;
+        if(numberOfProgrammers >= 1){
+            return calculateNumberOfInterviews(numberOfProgrammers - 1) +
+                    (numberOfProgrammers - 1);
         }
         else{
-            return calculateNumberOfInterviews(numberOfProgrammers - 1) + numberOfProgrammers;
+            return numberOfProgrammers;
+
         }
     }
 }
