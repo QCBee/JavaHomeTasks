@@ -9,50 +9,73 @@ public class SquareBuilder {
         int userInput = Integer.parseInt(console.next());
 
         buildSquare(userInput);
-//        System.out.println(fullString);
-//        System.out.println(spacedString);
-//        System.out.println(fullString);
-//        System.out.println(spacedString);
-//        System.out.println(fullString);
     }
 
     private static void buildSquare(int userInput) {
-//        for (int i = 1; i < (userInput * 4 + (walls - 1)); i++){
-////            System.out.println();
-//
-//            if (i % 2 == 0)
-//                System.out.print("*   *");
-//            else
-//                System.out.print("*");
-//
-//            for (int j = 1; j <(userInput+1); j++){
-//                System.out.println();
-//            }
-//
-//        }
-
-        //  if (userInput >= 3 && userInput <= 9) {
-        for (int i = 0; i < (userInput + 2) / 3; i++) {
-            for (int j = 0; j < userInput + 2; j++) {
-                if (i % 2 == 0) {
-                    System.out.print("*");
-                } else {
-                    System.out.print("*");
-
-                    for (int k = 0; k < userInput; k++) {
-                        System.out.print(" ");
+        if (userInput < 3 | userInput > 9) {//verify invalid entered data
+            System.out.println("You entered invalid numbers of spaces");
+        }
+        //verify valid data and build the square
+        else {
+            switch (userInput) {
+                case 3:
+                    for (int i = 0; i < (userInput * 3); i++) {//build the height
+                        for (int j = 0; j < ((userInput * 4) + 5); j++) { //build the line that contains only stars
+                            if (i % 2 == 0) {
+                                System.out.print("*");
+                            } else {
+                                if (j <= userInput + 1) {
+                                    System.out.print("*");
+                                    for (int k = 0; k < userInput; k++) {//build the line that contains stars and spaces
+                                        System.out.print(" ");
+                                    }
+                                }
+                            }
+                        }
+                        System.out.println();
                     }
-
-                    System.out.print("*");
-                }
-
+                    break;
+                case 6:
+                    for (int i = 0; i < (userInput * 2) + 1; i++) {
+                        for (int j = 0; j < (userInput * 4) + 5; j++) {
+                            if (i % 3 == 0) {
+                                System.out.print("*");
+                            } else {
+                                if (j <= userInput - 2) {
+                                    System.out.print("*");
+                                    for (int k = 0; k < userInput; k++) {
+                                        System.out.print(" ");
+                                    }
+                                }
+                            }
+                        }
+                        System.out.println();
+                    }
+                    break;
+                case 9:
+                    for (int i = 0; i < (userInput * 2) -1; i++) {
+                        for (int j = 0; j < (userInput * 4) +5; j++) {
+                            if (i % 4 == 0) {
+                                System.out.print("*");
+                            }
+                            else {
+                                if (j <= userInput - 5)
+                                System.out.print("*");
+                                for (int k = 0; k < userInput; k++) {
+                                    System.out.print(" ");
+                                }
+                            }
+                        }
+                        System.out.println();
+                        
+                    }
+                    break;
+                    default:
+                        System.out.println("You entered number that is NOT multiple of 3");
             }
-            System.out.println();
         }
     }
 }
-
-
 
 
 
