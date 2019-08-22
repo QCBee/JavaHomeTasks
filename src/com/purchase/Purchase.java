@@ -1,8 +1,8 @@
-package com.TaskPractice;
+package com.purchase;
 
 import java.util.Scanner;
 
-public class Task_Practice {
+public class Purchase {
     public static void main (String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите стоимость 1 кг конфет и нажмите Enter:");

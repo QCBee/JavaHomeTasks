@@ -1,6 +1,7 @@
-/*package com.SumNumber;
-
-
+package com.sumNumber;
+/*
+Написать программу, которая будет суммировать цифры в заданном числе и выводить результат на экран
+ */
 public class SumNumber {
     public static void main(String[] args) {
         long value = 15875;
@@ -8,7 +9,6 @@ public class SumNumber {
 
         System.out.println(value + " => " + dividedSum);
     }
-
 
     private static long decomposeValue(long value, long dividedSum) {
         if (value > 0) {
@@ -18,6 +18,4 @@ public class SumNumber {
     }
 }
 
-
-*/
 

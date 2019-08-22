@@ -1,13 +1,12 @@
-package com.company;
+package com.grid;
 
 import java.util.Scanner;
 
-public class SquareBuilder {
+public class GridBuilder {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Enter number of spaces");
+        System.out.println("Enter number of spaces. Number should be multiple of 3 and in the diapason from 3 till 9");
         int userInput = Integer.parseInt(console.next());
-
         buildSquare(userInput);
     }
 
